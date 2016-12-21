@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      精彩赛事
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid *ngFor="let item of items">
+    <ion-row>
+      <ion-col width="col-100">
+        <h5 color="danger">{{item.date}} <a href="{{item.url}}" style="float: right;">直播</a></h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-20>
+        <p>
+          <img src="./assets/img/{{item.img1}}" />
+        </p>
+        <p style="text-align: center;">
+          {{item.name1}}
+        </p>
+      </ion-col>
+      <ion-col width-20>
+        <h1 style="text-align: center; margin-top: 50px;">VS</h1>
+      </ion-col>
+      <ion-col width-20>
+        <p>
+          <img src="./assets/img/{{item.img2}}" />
+        </p>
+        <p style="text-align: center;">
+          {{item.name2}}
+        </p>
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

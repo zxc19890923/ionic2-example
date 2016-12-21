@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>发送邮件</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>收件人</ion-label>
+        <ion-input type="text" [(ngModel)]="rec" name="rec"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>标题</ion-label>
+        <ion-input type="text" [(ngModel)]="title" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>内容</ion-label>
+        <ion-input type="text" [(ngModel)]="content" name="content"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="sentMail()">发送邮件</button>
+  </form>
+</ion-content>

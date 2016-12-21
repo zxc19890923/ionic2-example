@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>首页</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- 加载slide -->
+  <my-slide></my-slide>
+  <br/>
+  <!-- 新闻列表 -->
+  <ion-list>
+    <ion-item *ngFor="let item of data" key="item.id" (click)="goToInfo(item.name, item.id, item.message, item.img)">
+      <ion-thumbnail item-left>
+        <img src="./assets/img/{{item.img}}">
+      </ion-thumbnail>
+      <p style="font-size: 16px; color: #333;"><b>{{item.name}}</b></p>
+      <p>{{item.position}}</p>
+      <p>{{item.address}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

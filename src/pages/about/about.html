@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>资讯</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--导航栏-->
+  <!--设置segmentNew的默认值就是选中的标签-->
+  <div padding>
+    <ion-segment [(ngModel)]="segmentNew">
+      <ion-segment-button value="text">
+        文字新闻
+      </ion-segment-button>
+      <ion-segment-button value="video">
+        视频集锦
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <br/>
+  <!--内容栏-->
+  <div [ngSwitch]="segmentNew">
+    <my-text *ngSwitchCase="'text'"></my-text>
+    <my-video *ngSwitchCase="'video'"></my-video>
+  </div>
+</ion-content>

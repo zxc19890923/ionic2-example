@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h2>{{title}}</h2>
+  <img src="./assets/img/{{img}}" style="width: 100%"/>
+  <p style="font-size: 16px" *ngFor="let item of contain">{{item}}</p>
+  <a href="{{url}}" target="_blank">阅读原文</a>
+</ion-content>

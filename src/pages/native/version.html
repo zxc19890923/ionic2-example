@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>版本信息</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>名称: {{vname}}</ion-item>
+    <ion-item>版本代号: {{vcode}}</ion-item>
+    <ion-item>版本编号: {{vnumber}}</ion-item>
+    <ion-item>包名称: {{vpackname}}</ion-item>
+  </ion-list>
+  <button (click)="showAction()" ion-button block>显示ActionSheet</button>
+</ion-content>
